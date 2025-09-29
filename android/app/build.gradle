@@ -1,15 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace "wnzl.receipt.wallet"
+    namespace "com.example.myapp"
     compileSdk rootProject.ext.compileSdkVersion
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8 // Or your desired minimum
-        targetCompatibility JavaVersion.VERSION_1_8 // Or your desired minimum
-    }
-
     defaultConfig {
-        applicationId "wnzl.receipt.wallet"
+        applicationId "com.example.myapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

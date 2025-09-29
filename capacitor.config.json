@@ -1,6 +1,6 @@
 {
-  "appId": "wnzl.receipt.wallet",
-  "appName": "receipt-wallet",
+  "appId": "com.example.myapp",
+  "appName": "MyApp",
   "webDir": "dist",
   "plugins": {
     "SplashScreen": {

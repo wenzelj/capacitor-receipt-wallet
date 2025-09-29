@@ -1,4 +1,4 @@
-package wnzl.receipt.wallet;
+package com.example.myapp;
 
 import com.getcapacitor.BridgeActivity;
 
