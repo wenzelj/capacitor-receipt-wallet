@@ -13,12 +13,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@capacitor/android": "^7.4.3",
     "@capacitor/camera": "latest",
-    "@capacitor/core": "latest",
+    "@capacitor/core": "^7.4.3",
     "@capacitor/splash-screen": "latest"
   },
   "devDependencies": {
-    "@capacitor/cli": "latest",
+    "@capacitor/cli": "^7.4.3",
     "@tailwindcss/vite": "^4.1.13",
     "tailwindcss": "^4.1.13",
     "vite": "^5.4.2"
