@@ -1,7 +1,4 @@
-import { SplashScreen } from "@capacitor/splash-screen";
-
 document.addEventListener("DOMContentLoaded", () => {
-  SplashScreen.hide();
   const navLinks = document.querySelectorAll("nav a");
 
   navLinks.forEach((link) => {
