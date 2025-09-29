@@ -16,7 +16,8 @@
     "@capacitor/android": "^7.4.3",
     "@capacitor/camera": "latest",
     "@capacitor/core": "latest",
-    "@capacitor/splash-screen": "latest"
+    "@capacitor/splash-screen": "latest",
+    "@tailwindcss/cli": "^4.1.13"
   },
   "devDependencies": {
     "@capacitor/cli": "latest",

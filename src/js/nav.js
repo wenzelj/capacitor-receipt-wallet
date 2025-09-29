@@ -1,15 +1,16 @@
+import '../css/tailwind.css';
 document.addEventListener('DOMContentLoaded', () => {
   const content = document.getElementById('content');
   const navButtons = document.querySelectorAll('.nav-btn');
 
   const setActiveButton = (activeButton) => {
     navButtons.forEach(button => {
-      button.classList.remove('text-blue-600');
+      button.classList.remove('text-green-600');
       button.classList.add('text-gray-500');
       button.removeAttribute('aria-current');
     });
     activeButton.classList.remove('text-gray-500');
-    activeButton.classList.add('text-blue-600');
+    activeButton.classList.add('text-green-600');
     activeButton.setAttribute('aria-current', 'page');
   };
 

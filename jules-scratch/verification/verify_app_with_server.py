@@ -34,18 +34,18 @@ async def main():
 
         # 1. Verify initial state (Home page)
         await expect(page.locator('h1')).to_have_text('Home Page')
-        await expect(page.locator('button[data-page="home"]')).to_have_class(/text-blue-600/)
+        await expect(page.locator('button[data-page="home"]')).to_have_class(/text-green-600/)
         await expect(page.locator('button[data-page="home"]')).to_have_attribute('aria-current', 'page')
 
         # 2. Click Search and verify
         await page.click('button[data-page="search"]')
         await expect(page.locator('h1')).to_have_text('Search Page')
-        await expect(page.locator('button[data-page="search"]')).to_have_class(/text-blue-600/)
+        await expect(page.locator('button[data-page="search"]')).to_have_class(/text-green-600/)
 
         # 3. Click Settings and verify
         await page.click('button[data-page="settings"]')
         await expect(page.locator('h1')).to_have_text('Settings Page')
-        await expect(page.locator('button[data-page="settings"]')).to_have_class(/text-blue-600/)
+        await expect(page.locator('button[data-page="settings"]')).to_have_class(/text-green-600/)
 
         await page.screenshot(path="jules-scratch/verification/verification.png")
         await browser.close()
