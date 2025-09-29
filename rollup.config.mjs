@@ -1,5 +1,19 @@
-<!doctype html>
-<html lang="en" dir="ltr">
+import html from '@rollup/plugin-html';
+
+export default {
+  // 1. Use the JavaScript file as the input.
+  input: 'src/js/nav.js',
+  output: {
+    // 2. Define the output directory and file format.
+    dir: 'dist',
+    format: 'iife', // A self-executing function, good for browsers.
+  },
+  plugins: [
+    // 3. Use the HTML plugin to generate an index.html.
+    html({
+      // Use your existing index.html as a template.
+      template: ({ files }) => `<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>MyApp</title>
@@ -9,15 +23,14 @@
     />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
-
     <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
     <link rel="manifest" href="./manifest.json" />
     <link rel="stylesheet" href="./css/style.css" />
     <meta name="theme-color" content="#31d53d" />
+    ${files.css.map(({ fileName }) => `<link href="${fileName}" rel="stylesheet">`).join('\n')}
   </head>
   <body class="bg-gray-100 font-sans">
     <main id="content" class="pb-20"></main>
-
     <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg">
       <div class="flex justify-around">
         <button data-page="home" class="nav-btn flex flex-col items-center p-2 text-gray-500 hover:text-blue-600 w-full">
@@ -34,7 +47,9 @@
         </button>
       </div>
     </nav>
-
-    <script src="/js/nav.js" type="module"></script>
+    ${files.js.map(({ fileName }) => `<script src="${fileName}" type="text/javascript"></script>`).join('\n')}
   </body>
-</html>
+</html>`
+    }),
+  ],
+};
