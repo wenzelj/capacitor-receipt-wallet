@@ -16,8 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const loadPage = async (page, button) => {
     try {
-      // Use a root-relative path for robustness
-      const response = await fetch(`/pages/${page}.html`);
+      const response = await fetch(`pages/${page}.html`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
